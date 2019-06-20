@@ -12,4 +12,5 @@ Debug/*
 ipch/*
 x64/*
 CartoonMaker/x64/*
+CartoonMaker/Debug/*
 #----------------CartoonMaker------------------
