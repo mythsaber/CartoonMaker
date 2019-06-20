@@ -76,4 +76,5 @@ private:
 	cv::Mat m_srcimg;
 public:
 	afx_msg void OnBnClickedStartprocess();
+	afx_msg void OnStnClickedDisplay();
 };

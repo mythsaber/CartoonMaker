@@ -97,10 +97,7 @@ BEGIN_MESSAGE_MAP(CCartoonMakerDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_ABOUT, &CCartoonMakerDlg::OnBnClickedAbout)
-//	ON_BN_CLICKED(IDC_BUTTON3, &CCartoonMakerDlg::OnBnClickedButton3)
 ON_BN_CLICKED(IDC_OPEN, &CCartoonMakerDlg::OnBnClickedOpen)
-//ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER_TIMES_SAMPLE, &CCartoonMakerDlg::OnNMCustomdrawSliderTimesSample)
-//ON_EN_CHANGE(IDC_SIGMACOLOR, &CCartoonMakerDlg::OnEnChangeSigmacolor)
 ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER_TIMES_SAMPLE, &CCartoonMakerDlg::OnNMCustomdrawSliderTimesSample)
 ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER_TIMES_BIFILTER, &CCartoonMakerDlg::OnNMCustomdrawSliderTimesBifilter)
 ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER_SIZE_BIFILTER, &CCartoonMakerDlg::OnNMCustomdrawSliderSizeBifilter)
@@ -117,6 +114,7 @@ ON_EN_CHANGE(IDC_SIGMASPACE, &CCartoonMakerDlg::OnEnChangeSigmaspace)
 ON_EN_CHANGE(IDC_SIZE_MEDBLUR, &CCartoonMakerDlg::OnEnChangeSizeMedblur)
 ON_EN_CHANGE(IDC_SIZE_THRESHOLD, &CCartoonMakerDlg::OnEnChangeSizeThreshold)
 ON_BN_CLICKED(IDC_STARTPROCESS, &CCartoonMakerDlg::OnBnClickedStartprocess)
+ON_STN_CLICKED(IDC_DISPLAY, &CCartoonMakerDlg::OnStnClickedDisplay)
 END_MESSAGE_MAP()
 
 
@@ -584,4 +582,10 @@ void CCartoonMakerDlg::OnBnClickedStartprocess()
 	addWeighted(down,0.9,coloredg,0.1,0,result);
 
 	show_mat(result, IDC_DISPLAY);
+}
+
+
+void CCartoonMakerDlg::OnStnClickedDisplay()
+{
+	// TODO: 在此添加控件通知处理程序代码
 }
